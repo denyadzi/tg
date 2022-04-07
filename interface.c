@@ -117,11 +117,11 @@ extern int one_string_len;
 extern char *one_string_prompt;
 extern int one_string_flags;
 extern int enable_json;
-int disable_auto_accept;
-int msg_num_mode;
-int permanent_msg_id_mode;
-int permanent_peer_id_mode;
-int disable_colors;
+extern int disable_auto_accept;
+extern int msg_num_mode;
+extern int permanent_msg_id_mode;
+extern int permanent_peer_id_mode;
+extern int disable_colors;
 extern int alert_sound;
 extern int binlog_read;
 extern char *home_directory;
@@ -3711,7 +3711,6 @@ void interpreter (char *line) {
   interpreter_ex (line, 0);
 }
 
-int readline_active;
 /*void rprintf (const char *format, ...) {
   mprint_start (ev);
   va_list ap;
